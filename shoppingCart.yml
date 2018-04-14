@@ -1,0 +1,29 @@
+spring:
+  data:
+    cassandra:
+      keyspace-name: dev
+      contact-points: 127.0.0.1
+      port: 9042
+  application:
+    name: shoppingCart
+
+server:
+  port: 8080
+      
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 3
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+info:
+  app:
+    name: shoppingCart  
+   
+promotion:
+  rest:
+    base-url: http://127.0.0.1:8081
+    entry-level: /entryLevelPromotion  
+    order-level: /orderLevelPromotion  
